@@ -1,7 +1,4 @@
 .ctr-tabs {
-  position: absolute;
-  left: 0;
-  top: 0;
   display: flex;
   height: 4rem;
   width: 100%;
@@ -28,7 +25,12 @@
     }
 
     &--active {
-     background: var(--primary-color);
+      background: var(--primary-color);
+      color: var(--main-bg-color);
+
+      &:hover {
+        background: var(--primary-color);
+      }
     }
   }
 }

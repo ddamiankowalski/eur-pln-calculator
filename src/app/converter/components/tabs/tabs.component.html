@@ -1,2 +1,11 @@
-<div class="ctr-tabs__tab" (click)="onTabClick('PLNEUR')">PLN/EUR</div>
-<div class="ctr-tabs__tab">EUR/PLN</div>
+<div
+  class="ctr-tabs__tab"
+  [class.ctr-tabs__tab--active]="_activeTab === 'PLNEUR'"
+  (click)="onTabClick('PLNEUR')"
+>
+  PLN/EUR</div>
+<div
+  class="ctr-tabs__tab"
+  [class.ctr-tabs__tab--active]="_activeTab === 'EURPLN'"
+  (click)="onTabClick('EURPLN')"
+>EUR/PLN</div>

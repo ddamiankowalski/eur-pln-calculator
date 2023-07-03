@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {CtrConverterModule} from "./converter/converter.module";
+import {CtrInputComponent} from "./shared/components/input/input.component";
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {CtrConverterModule} from "./converter/converter.module";
   ],
   imports: [
     BrowserModule,
-    CtrConverterModule
+    CtrConverterModule,
+    CtrInputComponent
   ],
   bootstrap: [AppComponent]
 })

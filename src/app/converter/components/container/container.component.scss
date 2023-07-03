@@ -1,4 +1,6 @@
 .ctr-container {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6,6 +8,11 @@
   background: var(--main-bg-color);
   box-shadow: rgba(0, 0, 0, 0.13) 0 3px 8px;
   width: 30rem;
-  height: 10rem;
   border-radius: .5rem;
+
+  &__content {
+    flex-basis: 100%;
+    border-radius: .5rem;
+    padding: 2rem;
+  }
 }
