@@ -1,4 +1,8 @@
 <ctr-container>
   <ctr-tabs></ctr-tabs>
-  <ctr-input></ctr-input>
+  <div class="input_container" [formGroup]="_formGroup">
+    <ctr-input [label]="'Amount'" [currency]="'EUR'" [control]="amount"></ctr-input>
+    <img class="image-icon" src="assets/arrows.svg">
+    <ctr-input [label]="'Converted to'" [currency]="'PLN'" [control]="converted"></ctr-input>
+  </div>
 </ctr-container>

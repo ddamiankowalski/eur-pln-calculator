@@ -1,0 +1,14 @@
+.input_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.image-icon {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin-top: 1rem;
+}

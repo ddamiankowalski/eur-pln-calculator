@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -28,6 +32,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   background: var(--main-bg-color);
   font-family: 'Hind', sans-serif;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
