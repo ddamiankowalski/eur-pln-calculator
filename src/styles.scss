@@ -1,5 +1,7 @@
 @use 'colors';
 
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,6 +24,7 @@ time, mark, audio, video {
   height: 100%;
   width: 100%;
   background: var(--main-bg-color);
+  font-family: 'Hind', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,

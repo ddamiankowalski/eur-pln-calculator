@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from "@angular/core";
 import {ClassBinder} from "../../../shared/services/class-binder.service";
+import {ConversionType} from "../../interfaces/conversion-type";
 
 @Component({
   selector: 'ctr-tabs',
@@ -12,5 +13,9 @@ import {ClassBinder} from "../../../shared/services/class-binder.service";
 export class CtrTabs {
   constructor(classBinder: ClassBinder) {
     classBinder.bind('ctr-tabs');
+  }
+
+  protected onTabClick(type: ConversionType): void {
+    console.log(type);
   }
 }
