@@ -1,11 +1,9 @@
-<div
-  class="ctr-tabs__tab"
-  [class.ctr-tabs__tab--active]="_activeTab === 'PLNEUR'"
-  (click)="onTabClick('PLNEUR')"
+<div class="ctr-tabs__tab" [class.ctr-tabs__tab--active]="_activeTab === 'PLNEUR'" (click)="onTabClick('PLNEUR')">
+  <img class="ctr-tabs__flag" src="assets/flags/PL.svg">
+  PLN/EUR
+</div>
+<div class="ctr-tabs__tab" [class.ctr-tabs__tab--active]="_activeTab === 'EURPLN'" (click)="onTabClick('EURPLN')"
 >
-  PLN/EUR</div>
-<div
-  class="ctr-tabs__tab"
-  [class.ctr-tabs__tab--active]="_activeTab === 'EURPLN'"
-  (click)="onTabClick('EURPLN')"
->EUR/PLN</div>
+  <img class="ctr-tabs__flag" src="assets/flags/GB.svg">
+  EUR/PLN
+</div>

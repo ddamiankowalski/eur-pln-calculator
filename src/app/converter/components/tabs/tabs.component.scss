@@ -7,6 +7,13 @@
   font-size: 12px;
   color: var(--secondary-text);
 
+  &__flag {
+    display: block;
+    margin-bottom: .125rem;
+    margin-right: .5rem;
+    border-radius: .125rem;
+  }
+
   &__tab {
     background: var(--secondary-color);
     display: flex;

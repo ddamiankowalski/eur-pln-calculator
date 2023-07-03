@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from "@angular/core";
+import {ChangeDetectionStrategy, Component, EventEmitter, Output, ViewEncapsulation} from "@angular/core";
 import {ClassBinder} from "../../../shared/services/class-binder.service";
 import {ConversionType} from "../../interfaces/conversion-type";
 
@@ -11,6 +11,8 @@ import {ConversionType} from "../../interfaces/conversion-type";
   providers: [ClassBinder]
 })
 export class CtrTabs {
+  @Output() tab: EventEmitter<ConversionType> = new EventEmitter<ConversionType>();
+
   protected _activeTab: ConversionType = 'PLNEUR';
 
   constructor(classBinder: ClassBinder) {
@@ -19,5 +21,6 @@ export class CtrTabs {
 
   protected onTabClick(type: ConversionType): void {
     this._activeTab = type;
+    this.tab.emit(this._activeTab);
   }
 }

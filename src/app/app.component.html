@@ -1,8 +1,8 @@
 <ctr-container>
-  <ctr-tabs></ctr-tabs>
+  <ctr-tabs (tab)="onTabChange($event)"></ctr-tabs>
   <div class="input_container" [formGroup]="_formGroup">
-    <ctr-input [label]="'Amount'" [currency]="'EUR'" [control]="amount"></ctr-input>
+    <ctr-input [label]="'Amount'" [currency]="currency" [control]="amount"></ctr-input>
     <img class="image-icon" src="assets/arrows.svg">
-    <ctr-input [label]="'Converted to'" [currency]="'PLN'" [control]="converted"></ctr-input>
+    <ctr-input [label]="'Converted to'" [currency]="currency" [control]="converted"></ctr-input>
   </div>
 </ctr-container>

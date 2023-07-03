@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from "@angular/core";
 import {ClassBinder} from "../../services/class-binder.service";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {ConversionType} from "../../../converter/interfaces/conversion-type";
 
 @Component({
   standalone: true,
@@ -18,7 +19,7 @@ export class CtrInputComponent {
   protected _id: number = CtrInputComponent.id;
 
   @Input({ required: true }) control!: FormControl<number>;
-  @Input({ required: true }) currency!: 'EUR' | 'PLN';
+  @Input({ required: true }) currency!: ConversionType;
   @Input() label: string = '';
 
   constructor(classBinder: ClassBinder) {
