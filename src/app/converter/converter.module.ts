@@ -6,11 +6,13 @@ import * as components from './components';
   imports: [CommonModule],
   declarations: [
     components.CtrTabs,
-    components.CtrContainer
+    components.CtrContainer,
+    components.CtrDisclaimer
   ],
   exports: [
     components.CtrContainer,
-    components.CtrTabs
+    components.CtrTabs,
+    components.CtrDisclaimer
   ]
 })
 export class CtrConverterModule {}
