@@ -6,22 +6,15 @@ describe('AppComponent', () => {
     declarations: [AppComponent]
   }));
 
-  it('should create the app', () => {
+  it('Creates the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'eur-pln-calculator'`, () => {
+  it(`Sets the title of the application to #'EUR/PLN Converter'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('eur-pln-calculator');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('eur-pln-calculator app is running!');
+    expect(app.title).toEqual('EUR/PLN Converter');
   });
 });
