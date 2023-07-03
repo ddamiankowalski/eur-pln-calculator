@@ -19,7 +19,7 @@ interface ConversionResponse {
 export class ConverterService {
   private _http = inject(HttpClient);
   private _cdRef = inject(ChangeDetectorRef);
-  private _endpoint = 'http://api.nbp.pl/api/exchangerates/rates/a/gbp/last/1/?format=json';
+  private _endpoint = 'http://api.nbp.pl/api/exchangerates/rates/a/eur/last/1/?format=json';
 
   public getRate(): Observable<number> {
     return this._http.get<ConversionResponse>(this._endpoint).pipe(
@@ -31,7 +31,7 @@ export class ConverterService {
   }
 
   public convertWith(rate: number, type: ConversionType, formGroup: FormGroup) {
-    const result = type === 'PLNEUR' ? this.convertPLNtoEUR(rate, formGroup) : this.convertEURtoPLN(rate, formGroup);
+    const result = type === 'EURPLN' ? this.convertPLNtoEUR(rate, formGroup) : this.convertEURtoPLN(rate, formGroup);
     formGroup.get('converted')?.setValue(result);
     this._cdRef.markForCheck();
   }
@@ -41,6 +41,6 @@ export class ConverterService {
   }
 
   private convertEURtoPLN(rate: number, formGroup: FormGroup): number {
-    return rate * formGroup.get('amount')?.value;
+    return (1 / rate) * formGroup.get('amount')?.value;
   }
 }
