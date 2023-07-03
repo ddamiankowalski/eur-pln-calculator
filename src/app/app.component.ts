@@ -13,8 +13,6 @@ import {ConverterService} from "./api/services/converter.service";
   providers: [ConverterService]
 })
 export class AppComponent {
-  title = 'EUR/PLN Converter';
-
   protected _formGroup: FormGroup;
 
   get amount(): FormControl<number> {
