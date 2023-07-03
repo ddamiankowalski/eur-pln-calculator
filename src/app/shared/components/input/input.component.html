@@ -1,6 +1,13 @@
 <label class="ctr-input__label" [for]="_id">{{ label }}</label>
-<input [id]="_id" class="ctr-input__input" [formControl]="control">
-
-<div class="ctr-input__currency">
-  {{ currencyParsed }}
+<div class="ctr-input__container">
+  <input
+    [placeholder]="placeholder"
+    type="number" [attr.disabled]="disabled"
+    [readonly]="disabled" [id]="_id" class="ctr-input__input"
+    [class.ctr-input__input--disabled]="disabled"
+    [formControl]="control"
+  >
+  <div class="ctr-input__currency" [class.ctr-input__currency--disabled]="disabled">
+    {{ currencyParsed }}
+  </div>
 </div>

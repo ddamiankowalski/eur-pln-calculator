@@ -32,8 +32,8 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this._formGroup = fb.group({
-      amount: fb.control(0, { validators: [Validators.required] }),
-      converted: fb.control(0, { validators: [Validators.required] }),
+      amount: fb.control(null, { validators: [Validators.required] }),
+      converted: fb.control(null, { validators: [Validators.required] }),
       currency: fb.control('PLNEUR')
     })
   }

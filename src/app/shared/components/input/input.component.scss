@@ -1,12 +1,25 @@
 .ctr-input {
+  color: var(--primary-color);
+
   flex-basis: 100%;
   position: relative;
+
+  &__container {
+    position: relative;
+  }
 
   &__currency {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     right: 1rem;
+    font-size: .75rem;
+    font-weight: 600;
+    background: none;
 
+    &--disabled {
+      color: var(--disabled-input-text);
+    }
   }
 
   &__input {
@@ -19,14 +32,42 @@
     font-size: 1rem;
     font-weight: 600;
     transition: border .3s;
+    color: var(--disabled-input-text);
 
-    &:focus {
+    &::placeholder {
+      font-size: .825rem;
+      font-weight: 500;
+      opacity: .75;
+      transition: opacity .3s;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      color: var(--disabled-input-text);
+      background: var(--disabled-input);
+    }
+
+    input {
+      &:read-only {
+        pointer-events: none;
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+
+    &:focus:not(:read-only) {
       outline: 2px solid rgb(40, 83, 107, .25);
       border: 1px solid var(--primary-color);
     }
 
     &:hover {
       border: 1px solid var(--primary-color);
+
+      &::placeholder {
+        opacity: 1;
+      }
     }
   }
 

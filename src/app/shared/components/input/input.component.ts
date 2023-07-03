@@ -20,7 +20,9 @@ export class CtrInputComponent {
 
   @Input({ required: true }) control!: FormControl<number>;
   @Input({ required: true }) currency!: ConversionType;
+  @Input() placeholder: string = '';
   @Input() label: string = '';
+  @Input() disabled = false;
 
   get currencyParsed(): string {
     return this._id === 0 ? this.currency.slice(0, 3) : this.currency.slice(3, 6);
