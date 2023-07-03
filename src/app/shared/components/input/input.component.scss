@@ -1,5 +1,13 @@
 .ctr-input {
   flex-basis: 100%;
+  position: relative;
+
+  &__currency {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+
+  }
 
   &__input {
     height: 3rem;

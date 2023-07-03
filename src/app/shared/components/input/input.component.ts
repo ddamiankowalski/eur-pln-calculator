@@ -22,6 +22,10 @@ export class CtrInputComponent {
   @Input({ required: true }) currency!: ConversionType;
   @Input() label: string = '';
 
+  get currencyParsed(): string {
+    return this._id === 0 ? this.currency.slice(0, 3) : this.currency.slice(3, 6);
+  }
+
   constructor(classBinder: ClassBinder) {
     classBinder.bind('ctr-input');
 
