@@ -1,0 +1,17 @@
+.ctr-tabs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  background: var(--secondary-color);
+
+  &__tab {
+    background: var(--secondary-color);
+
+    &--active {
+     background: var(--primary-color);
+    }
+  }
+}
