@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {CtrConverterModule} from "./converter/converter.module";
 import {CtrInputComponent} from "./shared/components/input/input.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     BrowserModule,
     CtrConverterModule,
     CtrInputComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
